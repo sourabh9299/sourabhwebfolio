@@ -5,6 +5,7 @@ const { query } = require('express');
 const e = require('express');
 const app = express();
 const bodyParser = require("body-parser")
+const port = process.env.PORT || 3000;
 
 // New app using express module
 app.use(bodyParser.urlencoded({
@@ -20,7 +21,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 const server = http.createServer(app);
-app.listen(3000);
+app.listen(port);
 
 app.set("view engine", "hbs");
 app.set("views", "./screen")
