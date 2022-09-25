@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact</title>
+</head>
+<body>
+
+<header>
+    <section class="head_div containerp container" id="navBar">
+        <div class="bar_items">
+            <h3 class="heading">Portfoli<span>o</span> </h3>
+        </div>
+        <div class="flex_display">
+            <ul>
+                <a href="./index">Home</a>
+            </ul>
+            <ul>
+                <a href="./contact">Contact</a>
+            </ul>
+            <ul>
+                <a href="#">About</a>
+            </ul>
+        </div>
+
+    </section>
+</header>
+
+    <section class="contact_me">
+
+        <div class="container">
+            <form action="/myform" id="contact" method="post">
+            <h3>Quick Contact</h3>
+            {{!-- <h4>Contact us today, and get reply with in 24 hours!</h4> --}}
+        
+            <fieldset>
+                <input placeholder="Your name" name="name" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" name="email" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Phone Number" name="phone" type="tel" tabindex="3" required>
+            </fieldset>
+            
+            <fieldset>
+                <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="Sending">Submit</button>
+            </fieldset>
+            {{#if msg}}
+            Submitted.
+            {{/if}}
+
+            {{#if msg1}}
+            Data Already Exist
+            {{/if}}
+        </form>
+    
+        
+    </div>
+</section>
+</body>
+</html>
